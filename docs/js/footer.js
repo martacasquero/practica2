@@ -1,8 +1,16 @@
- document.addEventListener("DOMContentLoaded", function() {
-     fetch("https://github.com/martacasquero/practica2/blob/main/docs/footer.html")  //obtengo el contenido de lo que contiene footer.html 
-        .then(response => response.text())   // con esta linea convierto el contenido en texto plano 
-        .then(data => {
-             document.body.insertAdjacentHTML("beforeend", data);// inserto el contenido antes d que se termine el html 
-        })
-        .catch(error => console.error("Error al cargar el footer:", error));  
-});
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("footer").innerHTML = `
+      <footer style="background-color: #333; color: #fff; text-align: center; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+          <nav>
+            <a href="index.html" style="color: #fff; margin: 0 10px; text-decoration: none;">Inicio</a>
+            <a href="sobreNosotros.html" style="color: #fff; margin: 0 10px; text-decoration: none;">Sobre Nosotros</a>
+            <a href="tallas.html" style="color: #fff; margin: 0 10px; text-decoration: none;">Tallas</a>
+            <a href="registro.html" style="color: #fff; margin: 0 10px; text-decoration: none;">Registro</a>
+          </nav>
+        </div>
+      </footer>
+    `;
+  });
+  
